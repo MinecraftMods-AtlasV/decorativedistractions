@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    },
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    },
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    },
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    },
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    },
+    {
+      "item": "decorative_distractions:tinted_cobblestone"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "decorative_distractions:tinted_cobblestone_stairs"
+  }
+}

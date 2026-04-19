@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "decorative_distractions:block/smooth_blackstone",
+    "side": "decorative_distractions:block/smooth_blackstone",
+    "top": "decorative_distractions:block/smooth_blackstone"
+  }
+}

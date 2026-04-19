@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:tinted_stone_stairs_clean"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tinted_stone_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:tinted_stone_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tinted_stone_stairs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:tinted_stone_stairs_clean"
+    ]
+  }
+}
