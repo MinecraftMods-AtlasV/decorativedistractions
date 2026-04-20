@@ -1,0 +1,1 @@
+See `Licences and Credits` directory for specific licence of the code and assets, and the credits for the assets used

@@ -2,21 +2,24 @@
 
 ## 1. Items
 - [ ] Convert crystals -> dust -> concentrated pigment
+- [x] Paintbrush (turns regular blocks into tinted versions)
+  - [x] recipe
+  - [x] tooltip
 
 ## 2. Blocks
 - [x] Crystals and variants
   - [ ] Loot tables
   - [ ] Recipes
 - [ ] Tinted Blocks
-  - [ ] Blocks
-    - [ ] Recipes (need to add clean recipe for stone and grass)
+  - [x] Blocks
+    - [x] Recipes (need to add clean recipe for stone and grass)
     - [x] Loot Tables (have to be handled specially)
   - [ ] Slabs
     - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant)
-    - [ ] Loot Tables (have to be handled specially)
+    - [x] Loot Tables (have to be handled specially)
   - [ ] Stairs
     - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant)
-    - [ ] Loot Tables (have to be handled specially)
+    - [x] Loot Tables (have to be handled specially)
 - [ ] Metals
   - [ ] Rusty iron
   - [ ] Wrought iron (very dark)
@@ -40,12 +43,12 @@
 ### 5.1 Dynamic Tinting System
 - [ ] Expand tintable blocks
   - [ ] Leaves (unsure)
-  - [ ] Wood (optional / user-request driven)
-- [ ] Improve initial recipe
+  - [ ] Wood (optional / by user request probably)
+- [x] Improve initial recipe
 
 ### 5.2 Rendering / Models
-- [ ] Fix stair model issues
-  - [ ] Reversed inventory model
+- [x] Fix stair model issues
+  - [x] Reversed inventory model
   - [x] Broken in-world model
   - [x] Investigate StairBlock implementation (nonviable for fixing reversed inventory model)
 
