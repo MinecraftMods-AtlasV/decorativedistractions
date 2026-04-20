@@ -1,6 +1,123 @@
 {
   "parent": "minecraft:block/block",
+  "display": {
+    "fixed": {
+      "rotation": [
+        0,
+        90,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        135,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    }
+  },
   "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#bottom",
+          "tintindex": 0
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#side",
+          "tintindex": 0
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#side",
+          "tintindex": 0
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#side",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#top",
+          "tintindex": 0
+        },
+        "west": {
+          "cullface": "west",
+          "texture": "#side",
+          "tintindex": 0
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        8,
+        16
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#top",
+          "tintindex": 0
+        },
+        "east": {
+          "cullface": "east",
+          "texture": "#side",
+          "tintindex": 0
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#side",
+          "tintindex": 0
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#side",
+          "tintindex": 0,
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ]
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#top",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#side",
+          "tintindex": 0
+        }
+      },
+      "from": [
+        8,
+        8,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ]
+    },
     {
       "faces": {
         "down": {
