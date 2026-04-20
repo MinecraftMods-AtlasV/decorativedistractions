@@ -1,6 +1,10 @@
 {
   "values": [
     "decorative_distractions:tinted_stone",
-    "decorative_distractions:tinted_cobblestone"
+    "decorative_distractions:tinted_stone_stairs",
+    "decorative_distractions:tinted_stone_slab",
+    "decorative_distractions:tinted_cobblestone",
+    "decorative_distractions:tinted_cobblestone_stairs",
+    "decorative_distractions:tinted_cobblestone_slab"
   ]
 }

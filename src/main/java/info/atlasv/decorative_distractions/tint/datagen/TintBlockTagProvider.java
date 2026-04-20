@@ -28,18 +28,24 @@ public class TintBlockTagProvider extends BlockTagsProvider {
         for (GrassLike entry : GrassLike.values()) {
             if (entry.blockTag != null) {
                 tag(entry.blockTag).add(TintBlocks.TINTED_GRASS_BLOCK.block.get());
+                tag(entry.blockTag).add(TintBlocks.TINTED_GRASS_BLOCK.stairs.get());
+                tag(entry.blockTag).add(TintBlocks.TINTED_GRASS_BLOCK.slab.get());
             }
         }
 
         // TINTED STONE tags
         for (StoneLike entry : StoneLike.values()) {
             tag(entry.blockTag).add(TintBlocks.TINTED_STONE.block.get());
+            tag(entry.blockTag).add(TintBlocks.TINTED_STONE.stairs.get());
+            tag(entry.blockTag).add(TintBlocks.TINTED_STONE.slab.get());
         }
 
           // TINTED COBBLESTONE tags
         for (CobblestoneLike entry : CobblestoneLike.values()) {
             if (entry.blockTag != null) {
                 tag(entry.blockTag).add(TintBlocks.TINTED_COBBLESTONE.block.get());
+                tag(entry.blockTag).add(TintBlocks.TINTED_COBBLESTONE.stairs.get());
+                tag(entry.blockTag).add(TintBlocks.TINTED_COBBLESTONE.slab.get());
             }
         }
     }
