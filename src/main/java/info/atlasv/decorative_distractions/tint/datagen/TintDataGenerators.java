@@ -29,7 +29,7 @@ public class TintDataGenerators {
 //        generator.addProvider(event.includeServer(), blockTagsProvider);
 //        generator.addProvider(event.includeClient(), new BaseItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
 //
-//        generator.addProvider(event.includeClient(), new BaseItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new TintItemModelProvider(packOutput, existingFileHelper));
 //        generator.addProvider(event.includeClient(), new BaseBlockStateProvider(packOutput, existingFileHelper));
 //
 //        generator.addProvider(event.includeServer(), new BaseDataMapProvider(packOutput, lookupProvider));

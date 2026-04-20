@@ -7,6 +7,7 @@ import info.atlasv.decorative_distractions.core.blocksets.Amethyst;
 import info.atlasv.decorative_distractions.core.blocksets.Stone;
 import info.atlasv.decorative_distractions.lights.block.LightsBlocks;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
+import info.atlasv.decorative_distractions.tint.item.TintItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -75,6 +76,7 @@ public class CreativeTabs {
                         for (var holder : TintBlocks.ITEMS.getEntries()) {
                             output.accept(holder.get());
                         }
+                        output.accept(TintItems.PAINTBRUSH_ITEM.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

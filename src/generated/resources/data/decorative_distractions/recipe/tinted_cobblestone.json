@@ -3,7 +3,10 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "minecraft:dirt"
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "decorative_distractions:paintbrush"
     }
   ],
   "result": {

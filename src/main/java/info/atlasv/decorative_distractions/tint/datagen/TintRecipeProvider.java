@@ -3,14 +3,13 @@ package info.atlasv.decorative_distractions.tint.datagen;
 import info.atlasv.decorative_distractions.DecorativeDistractions;
 import info.atlasv.decorative_distractions.tint.TintEntry;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
+import info.atlasv.decorative_distractions.tint.item.TintItems;
 import info.atlasv.decorative_distractions.tint.recipe.TintRecipeSerializers;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
-import net.minecraft.data.recipes.SpecialRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,18 +25,50 @@ public class TintRecipeProvider extends RecipeProvider {
 
         // Base block recipes
         var cobblestoneItem = TintBlocks.TINTED_COBBLESTONE.item.get();
+        var stoneItem = TintBlocks.TINTED_STONE.item.get();
+        var grassItem = TintBlocks.TINTED_GRASS_BLOCK.item.get();
 
-        // TODO: Make a better recipe than 1 dirt -> 1 undyed tinted_cobblestone block
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, cobblestoneItem)
-                .requires(Items.DIRT)
-                .unlockedBy("has_dirt", has(Items.DIRT))
+        // Paintbrush Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, TintItems.PAINTBRUSH_ITEM.get())
+                .pattern("  F")
+                .pattern(" P ")
+                .pattern("S  ")
+                .define('F', ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "feathers")))
+                .define('P', ItemTags.PLANKS)
+                .define('S', ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "rods/wooden")))
+                .unlockedBy("has_feather", has(ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "feathers"))))
                 .save(output);
 
-        // tinted_cobblestone -> tinted_cobblestone (strips dye + history / resets colour)
+        // Regular block to tinted block
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, cobblestoneItem)
+                .requires(Items.COBBLESTONE)
+                .requires(TintItems.PAINTBRUSH_ITEM.get())
+                .unlockedBy("has_paintbrush", has(TintItems.PAINTBRUSH_ITEM.get()))
+                .save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, stoneItem)
+                .requires(Items.STONE)
+                .requires(TintItems.PAINTBRUSH_ITEM.get())
+                .unlockedBy("has_paintbrush", has(TintItems.PAINTBRUSH_ITEM.get()))
+                .save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, grassItem)
+                .requires(Items.GRASS_BLOCK)
+                .requires(TintItems.PAINTBRUSH_ITEM.get())
+                .unlockedBy("has_paintbrush", has(TintItems.PAINTBRUSH_ITEM.get()))
+                .save(output);
+
+        // tinted -> tinted (strips dye + history / resets colour)
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, cobblestoneItem)
                 .requires(cobblestoneItem)
                 .unlockedBy("has_tinted_cobblestone_block", has(cobblestoneItem))
                 .save(output, "tinted_cobblestone_block_clean");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, stoneItem)
+                .requires(stoneItem)
+                .unlockedBy("has_tinted_stone_block", has(stoneItem))
+                .save(output, "tinted_stone_block_clean");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, grassItem)
+                .requires(grassItem)
+                .unlockedBy("has_tinted_grass_block", has(grassItem))
+                .save(output, "tinted_grass_block_clean");
 
         // Special dyeing recipe - handles all TintBlockItems in the DYEABLE tag.
         SpecialRecipeBuilder.special(TintRecipeSerializers.TintDyeRecipe::new)

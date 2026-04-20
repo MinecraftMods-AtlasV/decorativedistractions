@@ -262,10 +262,12 @@
   "item.decorative_distractions.jet_shard": "Jet Shard",
   "item.decorative_distractions.magnesite_shard": "Magnesite Shard",
   "item.decorative_distractions.malachite_shard": "Malachite Shard",
+  "item.decorative_distractions.paintbrush": "Paintbrush",
   "item.decorative_distractions.plancheite_shard": "Plancheite Shard",
   "item.decorative_distractions.realgar_shard": "Realgar Shard",
   "item.decorative_distractions.selenite_shard": "Selenite Shard",
   "item.decorative_distractions.smokey_quartz_shard": "Smokey Quartz Shard",
   "item.decorative_distractions.thulite_shard": "Thulite Shard",
-  "item.decorative_distractions.tigers_eye_shard": "Tigers eye Shard"
+  "item.decorative_distractions.tigers_eye_shard": "Tigers eye Shard",
+  "tooltip.decorative_distractions.not_consumed_in_crafting": "§7This item is not consumed in crafting"
 }

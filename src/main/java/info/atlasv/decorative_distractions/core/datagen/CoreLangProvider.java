@@ -7,6 +7,7 @@ import info.atlasv.decorative_distractions.core.utils.TextFormatting;
 import info.atlasv.decorative_distractions.lights.block.LightsBlocks;
 import info.atlasv.decorative_distractions.lights.item.LightsItems;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
+import info.atlasv.decorative_distractions.tint.item.TintItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -33,6 +34,9 @@ public class CoreLangProvider extends LanguageProvider {
         // Lights
         add("block.decorative_distractions.light_panel.inverted", "Light Mode: Inverted");
         add("block.decorative_distractions.light_panel.normal", "Light Mode: Normal");
+
+        // Tooltips
+        add("tooltip.decorative_distractions.not_consumed_in_crafting", "§7This item is not consumed in crafting");
 
         // AUTOMATED BULLSHITTERY
         // Blocks (and their BlockItems via inherited translation key)
@@ -72,7 +76,8 @@ public class CoreLangProvider extends LanguageProvider {
     private Stream<DeferredHolder<Item, ? extends Item>> getItemEntries() {
         return Stream.of(
                 BasicItems.getEntries(),
-                LightsItems.getEntries()
+                LightsItems.getEntries(),
+                TintItems.getEntries()
         ).flatMap(Collection::stream);
     }
 }

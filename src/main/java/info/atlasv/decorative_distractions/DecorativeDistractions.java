@@ -12,6 +12,7 @@ import info.atlasv.decorative_distractions.tint.block.TintBlock;
 import info.atlasv.decorative_distractions.tint.block.TintBlockEntities;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
 import info.atlasv.decorative_distractions.tint.item.TintBlockItem;
+import info.atlasv.decorative_distractions.tint.item.TintItems;
 import info.atlasv.decorative_distractions.tint.recipe.TintRecipeSerializers;
 import info.atlasv.decorative_distractions.tint.utils.GetTintCommand;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
@@ -67,6 +68,7 @@ public class DecorativeDistractions {
         TintBlockEntities.register(modEventBus);
         TintDataComponents.register(modEventBus);
         TintRecipeSerializers.register(modEventBus);
+        TintItems.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
