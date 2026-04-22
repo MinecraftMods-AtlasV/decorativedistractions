@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "decorative_distractions:smooth_deepslate_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "decorative_distractions:smooth_deepslate_bricks_slab"
+  }
+}
