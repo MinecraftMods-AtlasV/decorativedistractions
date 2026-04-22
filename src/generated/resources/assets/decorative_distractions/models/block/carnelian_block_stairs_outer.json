@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "decorative_distractions:block/crystals/orange/block",
-    "side": "decorative_distractions:block/crystals/orange/block",
-    "top": "decorative_distractions:block/crystals/orange/block"
-  }
-}

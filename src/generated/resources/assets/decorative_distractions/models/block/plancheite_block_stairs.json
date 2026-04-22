@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "decorative_distractions:block/crystals/cyan/block",
-    "side": "decorative_distractions:block/crystals/cyan/block",
-    "top": "decorative_distractions:block/crystals/cyan/block"
-  }
-}

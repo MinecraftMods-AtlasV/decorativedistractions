@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side_tall",
-  "textures": {
-    "wall": "decorative_distractions:block/smooth_granite_bricks"
-  }
-}

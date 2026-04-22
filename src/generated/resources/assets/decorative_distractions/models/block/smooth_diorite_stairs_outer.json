@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "decorative_distractions:block/smooth_diorite",
-    "side": "decorative_distractions:block/smooth_diorite",
-    "top": "decorative_distractions:block/smooth_diorite"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "decorative_distractions:block/crystals/pink/block",
-    "side": "decorative_distractions:block/crystals/pink/block",
-    "top": "decorative_distractions:block/crystals/pink/block"
-  }
-}

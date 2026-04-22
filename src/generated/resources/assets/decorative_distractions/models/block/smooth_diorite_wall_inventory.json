@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "decorative_distractions:block/smooth_diorite"
-  }
-}

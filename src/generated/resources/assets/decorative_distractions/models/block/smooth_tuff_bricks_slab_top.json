@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "decorative_distractions:block/smooth_tuff_bricks",
-    "side": "decorative_distractions:block/smooth_tuff_bricks",
-    "top": "decorative_distractions:block/smooth_tuff_bricks"
-  }
-}

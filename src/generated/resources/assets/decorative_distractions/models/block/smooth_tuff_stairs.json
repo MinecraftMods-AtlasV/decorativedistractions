@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "decorative_distractions:block/smooth_tuff",
-    "side": "decorative_distractions:block/smooth_tuff",
-    "top": "decorative_distractions:block/smooth_tuff"
-  }
-}
