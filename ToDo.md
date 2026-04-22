@@ -2,27 +2,22 @@
 
 ## 1. Items
 - [ ] Convert crystals -> dust -> concentrated pigment
-- [x] Paintbrush (turns regular blocks into tinted versions)
-  - [x] recipe
-  - [x] tooltip
+  - [ ] Add dye tags to pigments so they can be used in recipes
 
 ## 2. Blocks
 - [x] Crystals and variants
-  - [ ] Loot tables
   - [ ] Recipes
+    - [ ] shard to block
+    - [ ] block to shard
+    - [ ] block to stairs
+    - [ ] block to slabs
 - [x] Stone Variants
-  - [x] Loot Tables
-  - [x] Recipes 
+  - [ ] more stones?
 - [ ] Tinted Blocks
-  - [x] Blocks
-    - [x] Recipes
-    - [x] Loot Tables (have to be handled specially)
   - [ ] Slabs
     - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
-    - [x] Loot Tables (have to be handled specially)
   - [ ] Stairs
     - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
-    - [x] Loot Tables (have to be handled specially)
 - [ ] Metals
   - [ ] Rusty iron
   - [ ] Wrought iron (very dark)
@@ -32,9 +27,6 @@
 - [ ] Budding crystals
 - [ ] Geodes
   - [ ] Consider adding new stone types for geodes
-- [ ] Crushing system
-  - [ ] Amethyst variants → crushed gems
-  - [ ] 1:8 shapeless recipe (crushed gems → pigment)
 
 ## 4. Custom Models
 - [ ] Custom model support for blocksets
@@ -47,13 +39,8 @@
 - [ ] Expand tintable blocks
   - [ ] Leaves (unsure)
   - [ ] Wood (optional / by user request probably)
-- [x] Improve initial recipe
 
 ### 5.2 Rendering / Models
-- [x] Fix stair model issues
-  - [x] Reversed inventory model
-  - [x] Broken in-world model
-  - [x] Investigate StairBlock implementation (nonviable for fixing reversed inventory model)
 
 ### 5.3 Shaders
 - [ ] Revisit shader implementation
