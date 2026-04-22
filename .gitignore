@@ -40,4 +40,5 @@ repo/
 !**/src/**/repo/
 
 ### Python Scripting for various automations ###
+/Automation
 *.py
