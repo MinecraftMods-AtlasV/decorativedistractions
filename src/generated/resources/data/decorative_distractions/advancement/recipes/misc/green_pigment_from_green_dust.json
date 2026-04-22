@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:malachite_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:green_pigment_from_green_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:green_pigment_from_green_dust"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "decorative_distractions:block/smooth_deepslate_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "decorative_distractions:block/bulb_lamp",
+  "textures": {
+    "frame": "decorative_distractions:block/light_panel/frame/iron",
+    "glass": "decorative_distractions:block/light_panel/glass/panel_glass"
+  }
+}

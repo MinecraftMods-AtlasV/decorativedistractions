@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:tigers_eye_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:brown_pigment_from_brown_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brown_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:brown_pigment_from_brown_dust"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "decorative_distractions:block/smooth_diorite_slab"
+    },
+    "type=double": {
+      "model": "decorative_distractions:block/smooth_diorite"
+    },
+    "type=top": {
+      "model": "decorative_distractions:block/smooth_diorite_slab_top"
+    }
+  }
+}

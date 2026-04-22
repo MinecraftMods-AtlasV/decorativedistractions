@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magnesite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:magnesite_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:magnesite_dust_from_magnesite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magnesite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:magnesite_dust_from_magnesite"
+    ]
+  }
+}

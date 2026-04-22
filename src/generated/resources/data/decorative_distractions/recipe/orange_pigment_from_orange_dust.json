@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "decorative_distractions:carnelian_dust"
+    },
+    {
+      "item": "decorative_distractions:mortar_and_pestle"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "decorative_distractions:orange_pigment"
+  }
+}

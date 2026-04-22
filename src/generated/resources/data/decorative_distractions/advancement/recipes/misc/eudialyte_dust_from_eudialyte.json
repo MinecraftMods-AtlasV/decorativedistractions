@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_eudialyte": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:eudialyte_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:eudialyte_dust_from_eudialyte"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_eudialyte"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:eudialyte_dust_from_eudialyte"
+    ]
+  }
+}

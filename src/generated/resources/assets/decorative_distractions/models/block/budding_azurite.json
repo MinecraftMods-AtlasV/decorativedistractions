@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "decorative_distractions:block/crystals/blue/budding"
+  }
+}

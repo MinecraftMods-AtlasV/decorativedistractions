@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_celestite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:celestite_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:celestite_dust_from_celestite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_celestite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:celestite_dust_from_celestite"
+    ]
+  }
+}

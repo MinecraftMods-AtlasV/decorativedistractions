@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "decorative_distractions:block/smooth_granite_bricks",
+    "side": "decorative_distractions:block/smooth_granite_bricks",
+    "top": "decorative_distractions:block/smooth_granite_bricks"
+  }
+}

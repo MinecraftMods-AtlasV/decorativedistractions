@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "decorative_distractions:tinted_grass_block"
+    },
+    {
+      "item": "decorative_distractions:tinted_grass_block"
+    },
+    {
+      "item": "decorative_distractions:tinted_grass_block"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "decorative_distractions:tinted_grass_block_slab"
+  }
+}

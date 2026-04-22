@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plancheite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:plancheite_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:plancheite_dust_from_plancheite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plancheite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:plancheite_dust_from_plancheite"
+    ]
+  }
+}

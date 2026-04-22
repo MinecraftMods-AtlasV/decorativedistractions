@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "decorative_distractions:block/smooth_andesite",
+    "side": "decorative_distractions:block/smooth_andesite",
+    "top": "decorative_distractions:block/smooth_andesite"
+  }
+}

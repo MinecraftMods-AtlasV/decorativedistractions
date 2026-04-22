@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:yellow_pigment_from_yellow_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:citrine_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:yellow_pigment_from_yellow_dust"
+    ]
+  }
+}

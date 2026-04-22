@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_paintbrush": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:paintbrush"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:tinted_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_paintbrush"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:tinted_stone"
+    ]
+  }
+}

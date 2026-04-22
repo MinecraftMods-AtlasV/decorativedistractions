@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gray_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:smokey_quartz_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:gray_pigment_from_gray_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gray_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:gray_pigment_from_gray_dust"
+    ]
+  }
+}

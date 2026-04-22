@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_realgar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:realgar_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:realgar_dust_from_realgar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_realgar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:realgar_dust_from_realgar"
+    ]
+  }
+}

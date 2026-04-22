@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:white_pigment_from_white_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:selenite_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:white_pigment_from_white_dust"
+    ]
+  }
+}

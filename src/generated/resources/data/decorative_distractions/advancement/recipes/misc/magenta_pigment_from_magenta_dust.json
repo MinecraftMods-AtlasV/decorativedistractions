@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "decorative_distractions:eudialyte_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "decorative_distractions:magenta_pigment_from_magenta_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magenta_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "decorative_distractions:magenta_pigment_from_magenta_dust"
+    ]
+  }
+}

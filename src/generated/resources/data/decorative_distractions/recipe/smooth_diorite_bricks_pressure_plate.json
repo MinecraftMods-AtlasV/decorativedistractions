@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "X": {
+      "item": "decorative_distractions:smooth_diorite_bricks"
+    }
+  },
+  "pattern": [
+    "XX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "decorative_distractions:smooth_diorite_bricks_pressure_plate"
+  }
+}
