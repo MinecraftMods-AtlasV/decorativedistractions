@@ -10,15 +10,18 @@
 - [x] Crystals and variants
   - [ ] Loot tables
   - [ ] Recipes
+- [x] Stone Variants
+  - [x] Loot Tables
+  - [x] Recipes 
 - [ ] Tinted Blocks
   - [x] Blocks
-    - [x] Recipes (need to add clean recipe for stone and grass)
+    - [x] Recipes
     - [x] Loot Tables (have to be handled specially)
   - [ ] Slabs
-    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant)
+    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
     - [x] Loot Tables (have to be handled specially)
   - [ ] Stairs
-    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant)
+    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
     - [x] Loot Tables (have to be handled specially)
 - [ ] Metals
   - [ ] Rusty iron

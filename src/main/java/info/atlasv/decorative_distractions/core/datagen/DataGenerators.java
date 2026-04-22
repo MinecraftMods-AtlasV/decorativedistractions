@@ -9,6 +9,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -25,10 +26,13 @@ public class DataGenerators {
 
 //        SculkDataGenerators.register(event);
 //        BaseDataGenerators.register(event);
-        BasicDataGenerators.register(event);
         LightsDataGenerators.register(event);
         TintDataGenerators.register(event);
+        BasicDataGenerators.register(event);
 
         event.getGenerator().addProvider(event.includeClient(), new CoreLangProvider(event.getGenerator().getPackOutput()));
+        generator.addProvider(event.includeServer(), new CoreRecipeProvider(packOutput, lookupProvider));
+        BlockTagsProvider blockTagsProvider = new CoreBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(event.includeServer(), blockTagsProvider);
     }
 }

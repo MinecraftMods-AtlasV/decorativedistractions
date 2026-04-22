@@ -36,8 +36,8 @@ public class TintDataGenerators {
 //
 //        generator.addProvider(event.includeClient(), new BaseLangProvider(packOutput));
         generator.addProvider(event.includeClient(), new TintBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new TintRecipeProvider(packOutput, lookupProvider));
-        TintBlockTagProvider blockTags = generator.addProvider(event.includeServer(), new TintBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeClient(), new TintItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+//        generator.addProvider(event.includeClient(), new TintRecipeProvider(packOutput, lookupProvider));
+//        TintBlockTagProvider blockTags = generator.addProvider(event.includeServer(), new TintBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
+//        generator.addProvider(event.includeClient(), new TintItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
     }
 }
