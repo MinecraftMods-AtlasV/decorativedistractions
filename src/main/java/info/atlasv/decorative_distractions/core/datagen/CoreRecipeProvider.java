@@ -1,6 +1,7 @@
 package info.atlasv.decorative_distractions.core.datagen;
 
 import info.atlasv.decorative_distractions.basic.block.BasicStoneBlockSets;
+import info.atlasv.decorative_distractions.basic.item.BasicItems;
 import info.atlasv.decorative_distractions.tint.TintEntry;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
 import info.atlasv.decorative_distractions.tint.item.TintItems;
@@ -30,6 +31,7 @@ public class CoreRecipeProvider extends RecipeProvider {
     // Basic module
     private void buildBasicRecipes(RecipeOutput output) {
         BasicStoneBlockSets.addRecipes(output);
+        BasicItems.addRecipes(output);          // mortar & pestle + crystal dusts
     }
 
     // Tint module

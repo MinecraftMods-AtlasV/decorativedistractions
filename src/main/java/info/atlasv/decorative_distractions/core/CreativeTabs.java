@@ -3,6 +3,7 @@ package info.atlasv.decorative_distractions.core;
 import info.atlasv.decorative_distractions.DecorativeDistractions;
 import info.atlasv.decorative_distractions.basic.block.BasicAmethystBlockSets;
 import info.atlasv.decorative_distractions.basic.block.BasicStoneBlockSets;
+import info.atlasv.decorative_distractions.basic.item.BasicItems;
 import info.atlasv.decorative_distractions.core.blocksets.Amethyst;
 import info.atlasv.decorative_distractions.core.blocksets.Stone;
 import info.atlasv.decorative_distractions.lights.block.LightsBlocks;
@@ -40,6 +41,8 @@ public class CreativeTabs {
                             output.accept(set.mediumBud.get());
                             output.accept(set.smallBud.get());
                             output.accept(set.shard.get());
+                            output.accept(BasicItems.CRYSTAL_DUSTS.get(variant).get());
+                            output.accept(BasicItems.CRYSTAL_PIGMENTS.get(variant).get());
                             output.accept(set.slab.get());
                             output.accept(set.stairs.get());
                         }
@@ -47,6 +50,8 @@ public class CreativeTabs {
                             output.accept(BasicAmethystBlockSets.VANILLA_AMETHYST_SLAB.get());
                             output.accept(BasicAmethystBlockSets.VANILLA_AMETHYST_STAIRS.get());
                         }
+                        output.accept(BasicItems.AMETHYST_DUST.get());
+                        output.accept(BasicItems.PURPLE_PIGMENT.get());
                         for (BasicStoneBlockSets.StoneVariant variant : BasicStoneBlockSets.StoneVariant.values()) {
                             Stone set = BasicStoneBlockSets.SMOOTH_VARIANTS.get(variant);
                             output.accept(set.block.get());
@@ -66,17 +71,18 @@ public class CreativeTabs {
                             output.accept(set.button.get());
                         }
                         for (LightsBlocks.MetalVariant metal : LightsBlocks.MetalVariant.values()) {
-                                Map<DyeColor, DeferredBlock<Block>> colourMap = LightsBlocks.LIGHT_PANELS.get(metal);
+                            Map<DyeColor, DeferredBlock<Block>> colourMap = LightsBlocks.LIGHT_PANELS.get(metal);
 
-                                for (DyeColor dye : DyeColor.values()) {
-                                    output.accept(colourMap.get(dye).get());
-                                }
+                            for (DyeColor dye : DyeColor.values()) {
+                                output.accept(colourMap.get(dye).get());
+                            }
 
                         }
                         for (var holder : TintBlocks.ITEMS.getEntries()) {
                             output.accept(holder.get());
                         }
                         output.accept(TintItems.PAINTBRUSH_ITEM.get());
+                        output.accept(BasicItems.MORTAR_AND_PESTLE.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {
