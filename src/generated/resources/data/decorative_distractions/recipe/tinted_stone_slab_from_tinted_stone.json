@@ -1,19 +1,4 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "ingredients": [
-    {
-      "item": "decorative_distractions:tinted_stone"
-    },
-    {
-      "item": "decorative_distractions:tinted_stone"
-    },
-    {
-      "item": "decorative_distractions:tinted_stone"
-    }
-  ],
-  "result": {
-    "count": 6,
-    "id": "decorative_distractions:tinted_stone_slab"
-  }
+  "type": "decorative_distractions:tint_slab",
+  "category": "misc"
 }
