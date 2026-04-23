@@ -2,7 +2,8 @@
 
 ## 1. Items
 - [ ] Convert crystals -> dust -> concentrated pigment
-  - [ ] Add dye tags to pigments so they can be used in recipes
+  - [x] Add dye tags to pigments so they can be used in recipes
+  - [ ] Vanilla recipes aren't dye tagged except shulker dyeing, Mojang what the fuck???
 
 ## 2. Blocks
 - [x] Crystals and variants
@@ -14,10 +15,7 @@
 - [x] Stone Variants
   - [ ] more stones?
 - [ ] Tinted Blocks
-  - [ ] Slabs
-    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
-  - [ ] Stairs
-    - [ ] Recipe (half done, want to impliment all same tinted blocks to same colour variant, and broken recipes)
+  - [ ] Add tooltip for the recipe for tinted stairs and slabs now that recipes aren't parsable
 - [ ] Metals
   - [ ] Rusty iron
   - [ ] Wrought iron (very dark)
