@@ -34,5 +34,6 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new CoreRecipeProvider(packOutput, lookupProvider));
         BlockTagsProvider blockTagsProvider = new CoreBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTagsProvider);
+        generator.addProvider(event.includeClient(), new CoreItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
     }
 }

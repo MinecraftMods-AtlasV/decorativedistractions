@@ -8,6 +8,7 @@ import info.atlasv.decorative_distractions.core.CreativeTabs;
 import info.atlasv.decorative_distractions.lights.block.LightsBlocks;
 import info.atlasv.decorative_distractions.lights.item.LightsItems;
 import info.atlasv.decorative_distractions.tint.TintDataComponents;
+import info.atlasv.decorative_distractions.tint.TintEntry;
 import info.atlasv.decorative_distractions.tint.block.TintBlock;
 import info.atlasv.decorative_distractions.tint.block.TintBlockEntities;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
@@ -72,7 +73,9 @@ public class DecorativeDistractions {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        // Wire tint block slab/stairs item suppliers now that all registries are
+        // fully bound - RegisterEvent has fired by the time commonSetup runs.
+        TintBlocks.getEntries().forEach(TintEntry::wireSuppliers);
     }
 
     // Add the example block item to the building blocks tab

@@ -7,6 +7,7 @@ import info.atlasv.decorative_distractions.core.utils.TextFormatting;
 import info.atlasv.decorative_distractions.lights.block.LightsBlocks;
 import info.atlasv.decorative_distractions.lights.item.LightsItems;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
+import info.atlasv.decorative_distractions.tint.item.TintBlockItem;
 import info.atlasv.decorative_distractions.tint.item.TintItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.BlockItem;
@@ -37,6 +38,7 @@ public class CoreLangProvider extends LanguageProvider {
 
         // Tooltips
         add("tooltip.decorative_distractions.not_consumed_in_crafting", "§7This item is not consumed in crafting");
+        add(TintBlockItem.TOOLTIP_KEY, "§7This can be dyed similarly to leather armour.");
 
         // AUTOMATED BULLSHITTERY
         // Blocks (and their BlockItems via inherited translation key)

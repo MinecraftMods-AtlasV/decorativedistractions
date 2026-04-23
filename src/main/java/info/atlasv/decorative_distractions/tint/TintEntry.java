@@ -67,6 +67,21 @@ public class TintEntry {
         this.stairsItem = registerItem(items, stairsName, this.stairs);
     }
 
+    /**
+     * Wires the slab and stairs supplier back-references onto the base block item.
+     * Must be called after the deferred registers have been bound to the event bus
+     * (i.e. after {@code BLOCKS.register(eventBus)} and {@code ITEMS.register(eventBus)}
+     * have been called), so that {@link net.neoforged.neoforge.registries.DeferredItem#get()}
+     * returns a bound value. Called by
+     * {@link info.atlasv.decorative_distractions.tint.block.TintBlocks#register}.
+     */
+    public void wireSuppliers() {
+        this.item.get().setSlabAndStairsSuppliers(
+                () -> this.slabItem.get(),
+                () -> this.stairsItem.get()
+        );
+    }
+
     // Helpers
     /**
      * Creates and registers a {@link TintBlockItem} with the standard tint components

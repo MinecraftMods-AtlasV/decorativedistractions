@@ -1,24 +1,29 @@
-package info.atlasv.decorative_distractions.tint.datagen;
+package info.atlasv.decorative_distractions.core.datagen;
 
 import info.atlasv.decorative_distractions.DecorativeDistractions;
+import info.atlasv.decorative_distractions.basic.block.BasicAmethystBlockSets;
+import info.atlasv.decorative_distractions.basic.item.BasicItems;
 import info.atlasv.decorative_distractions.core.datagen.tags.CobblestoneLike;
 import info.atlasv.decorative_distractions.core.datagen.tags.GrassLike;
 import info.atlasv.decorative_distractions.core.datagen.tags.StoneLike;
 import info.atlasv.decorative_distractions.tint.block.TintBlocks;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class TintItemTagProvider extends ItemTagsProvider {
+public class CoreItemTagProvider extends ItemTagsProvider {
 
-    public TintItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+    public CoreItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                                CompletableFuture<TagsProvider.TagLookup<Block>> blockTags,
                                @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, DecorativeDistractions.MODID, existingFileHelper);
@@ -26,15 +31,6 @@ public class TintItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        // All tint block items must be in DYEABLE so vanilla's armordye recipe applies.
-        // Iterating TintBlocks.ITEMS means new entries are covered automatically.
-        // Not needed now because of custom implimentation that isn't as relyable as vanilla but lets me have more
-        // control over colours and the crafting steps for /TintCalc (or /GetTint)
-//        var dyeableTag = tag(ItemTags.DYEABLE);
-//        TintBlocks.ITEMS.getEntries().forEach(holder ->
-//                dyeableTag.add(holder.get())
-//        );
-
         for (GrassLike entry : GrassLike.values()) {
             if (entry.itemTag != null) {
                 tag(entry.itemTag).add(TintBlocks.TINTED_GRASS_BLOCK.item.get());
@@ -52,5 +48,25 @@ public class TintItemTagProvider extends ItemTagsProvider {
                 tag(entry.itemTag).add(TintBlocks.TINTED_COBBLESTONE.item.get());
             }
         }
+
+        // Dye tags - crystal pigments (c:dyes/<colour>)
+        // Each AmethystVariant.getColour() returns a vanilla dye colour name,
+        // so it maps directly to the common tag convention.
+        for (BasicAmethystBlockSets.AmethystVariant variant : BasicAmethystBlockSets.AmethystVariant.values()) {
+            TagKey<Item> dyeTag = dyeTag(variant.getColour());
+            tag(dyeTag).add(BasicItems.CRYSTAL_PIGMENTS.get(variant).get());
+        }
+
+        // Purple pigment uses vanilla amethyst (no variant), maps to c:dyes/purple
+        tag(dyeTag("purple")).add(BasicItems.PURPLE_PIGMENT.get());
+    }
+
+    /**
+     * Builds a {@code c:dyes/<colour>} common tag key.
+     * Using ResourceLocation directly rather than Tags.Items to avoid
+     * hardcoding a specific NeoForge tags constant per colour.
+     */
+    private static TagKey<Item> dyeTag(String colour) {
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "dyes/" + colour));
     }
 }

@@ -98,25 +98,20 @@ public class CoreRecipeProvider extends RecipeProvider {
         var stairsItem = entry.stairsItem.get();
         String baseName = entry.name;
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, slabItem, 6)
-                .requires(parentItem).requires(parentItem).requires(parentItem)
-                .unlockedBy("has_" + baseName, has(parentItem))
-                .save(output, DecorativeDistractions.MODID + ":" + baseName + "_slab_from_" + baseName);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, slabItem)
                 .requires(slabItem)
                 .unlockedBy("has_" + baseName + "_slab", has(slabItem))
                 .save(output, DecorativeDistractions.MODID + ":" + baseName + "_slab_clean");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, stairsItem, 4)
-                .requires(parentItem).requires(parentItem).requires(parentItem)
-                .requires(parentItem).requires(parentItem).requires(parentItem)
-                .unlockedBy("has_" + baseName, has(parentItem))
-                .save(output, DecorativeDistractions.MODID + ":" + baseName + "_stairs_from_" + baseName);
+        SpecialRecipeBuilder.special(TintRecipeSerializers.TintSlabRecipe::new)
+                .save(output, DecorativeDistractions.MODID + ":" + baseName + "_slab_from_" + baseName);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, stairsItem)
                 .requires(stairsItem)
                 .unlockedBy("has_" + baseName + "_stairs", has(stairsItem))
                 .save(output, DecorativeDistractions.MODID + ":" + baseName + "_stairs_clean");
+
+        SpecialRecipeBuilder.special(TintRecipeSerializers.TintStairsRecipe::new)
+                .save(output, DecorativeDistractions.MODID + ":" + baseName + "_stairs_from_" + baseName);
     }
 }
